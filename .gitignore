@@ -1,1 +1,3 @@
 autoenroll\Lib\site-packages\*
+*.py[cod] 
+__pycache__
