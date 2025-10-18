@@ -27,15 +27,8 @@
             </select>
 
             <label for="taken">Classes taken (or in-progress)</label>
-            <input name="taken" id="taken" list="suggestions" placeholder="Type course number">
-            <datalist id="suggestions">
-                <option value="HTML">
-                <option value="CSS">
-                <option value="JavaScript">
-                <option value="Python">
-                <option value="C#">
-                <option value="Java">
-            </datalist>
+            <input name="taken" id="search" type="text" placeholder="Type course number...">
+            <ul id="suggestions"></ul>
             <button id="get-schedule">Get Schedule</button>
         </form>
     </div>
