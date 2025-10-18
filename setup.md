@@ -13,4 +13,8 @@ pip freeze > requirements.txt
 
 pip install -r requirements.txt
 
+
 # make djngo 
+
+py manage.py runserver
+
