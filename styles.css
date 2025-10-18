@@ -12,7 +12,7 @@
     font-size: 70px;
     margin: 0px;
     margin-top: 15px;
-    color: #026a37;
+    color: #039645;
 }
 
 .hollow {
@@ -30,14 +30,19 @@
     justify-items: center;
 }
 
-.degree-info .fields {
-    background-color: #CCCCCC;
+.fields {
+    text-align: left;
+    background-color: #053b2d;
     border-radius: 8px;
     padding: 30px;
     width: 400px;
 }
 
-.degree-info select {
+.fields label {
+    color:white;
+}
+
+.fields select {
     width: 95%;
     padding: 10px;
     margin-bottom: 15px;
@@ -47,7 +52,7 @@
     font-size: 16px;
 }
 
-.degree-info input {
+.fields input {
     width: 90%;
     padding: 10px;
     margin-bottom: 15px;
@@ -71,14 +76,14 @@ button {
 #schedule {
     display: none;
     margin-top: 40px;
-    background-color: #CCCCCC;
+    background-color: #053b2d;
     border-radius: 8px;
     padding: 30px;
     min-width: 600px;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid white;
     border-collapse: collapse;
 }
 
@@ -93,5 +98,41 @@ th, td {
 }
 
 #enrolled {
+    color: white;
     margin-left: 15px;
+}
+
+#gradient-bg {
+    margin: 0;
+    justify-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(300deg, #053b2d, #17ac32, #e0ff32);
+}
+
+#sign-in form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #053b2d;
+    border-radius: 8px;
+    padding: 30px;
+    width: 57vw;
+}
+
+#sign-in-button {
+    margin-top: 20px;
+    width: 120px;
+    align-self: center;
+}
+
+#sign-in label {
+    color: white;
+    font-size: 15px;
+}
+
+#sign-in input {
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }

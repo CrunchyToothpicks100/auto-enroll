@@ -10,16 +10,17 @@
 </head>
 
 <body>
-    <!-- Title and info -->
-    <div class="title-info">
-        <h1>Virtual <span class="hollow">Advisor</span></h1>
-        <p style="color: #757575">
-            Generate potential course schedules catered to
-            your degree for the Spring 2026 semester
-        </p>
-    </div>
+    <div id="gradient-bg" style="height: 150vh;">
+        <!-- Title and info -->
+        <div class="title-info">
+            <br style="height: 30px">
+            <h1>Virtual <span style="color: black">Advisor</span></h1>
+            <p style="color: #434343">
+                Generate potential course schedules catered to
+                your degree for the Spring 2026 semester
+            </p>
+        </div>
 
-    <div class="degree-info">
         <!-- Degree Info Form -->
         <div class="fields">
             <label for="major">Major</label>
@@ -31,14 +32,14 @@
             <input name="search-input" id="search-input" type="text"
                 placeholder="Enter Course (e.g., CIS 110 or Programming I)">
             <button id="add-class">Add Class</button>
-            <ul id="classes-taken"></ul>
+            <ul style="color: white;" id="classes-taken"></ul>
             <button id="search-button">Get Schedule</button>
         </div>
 
         <!-- Auto generated course schedule -->
         <div id="schedule">
-            <h2 style="margin: 0px; margin-bottom: 15px;">Course Schedule</h2>
-            <table id="course-table">
+            <h2 style="color: white; margin: 0px; margin-bottom: 15px;">Course Schedule</h2>
+            <table id="course-table" style="color: white;">
                 <tr>
                     <th>CRN</th>
                     <th>Subject</th>
