@@ -1,0 +1,24 @@
+:root {
+    font-family: 'Inter', Helvetica, sans-serif;
+}
+
+.title-info {
+    justify-content: center;
+    text-align: center;
+}
+
+.title-info h1 {
+    font-size: 70px;
+    margin: 5px;
+    margin-top: 15px;
+    color: #026a37;
+}
+
+.hollow {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #026a37,
+     1px -1px 0 #026a37,
+    -1px  1px 0 #026a37,
+     1px  1px 0 #026a37;
+}
