@@ -57,7 +57,7 @@
     font-size: 16px;
 }
 
-.degree-info button {
+button {
     font-weight: bold;
     font-size: 20px;
     background-color: black;
@@ -84,4 +84,14 @@ table, th, td {
 
 th, td {
     padding: 10px;
+}
+
+#enroll {
+    margin-top: 20px;
+    width: 200px;
+    align-self: center;
+}
+
+#enrolled {
+    margin-left: 15px;
 }

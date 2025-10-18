@@ -34,6 +34,8 @@
             <ul id="classes-taken"></ul>
             <button id="search-button">Get Schedule</button>
         </div>
+
+        <!-- Auto generated course schedule -->
         <div id="schedule">
             <h2 style="margin: 0px; margin-bottom: 15px;">Course Schedule</h2>
             <table id="course-table">
@@ -49,8 +51,20 @@
                     <th>Room</th>
                 </tr>
             </table>
+            <button id="enroll">Enroll</button>
+            <span id="enrolled"></span>
         </div>
         <script src="readcsv.js"></script>
+
+        <!-- Enroll confirmation script -->
+        <script>
+            const button = document.getElementById("enroll");
+            const output = document.getElementById("enrolled");
+
+            button.onclick = function () {
+                output.textContent = "You are now enrolled!";
+            };
+        </script>
     </div>
 </body>
 
