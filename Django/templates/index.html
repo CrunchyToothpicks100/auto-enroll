@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}Auto Enroll{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Welcome to Auto Enroll</h1>
+    <p>Use the controls below to begin enrollment.</p>
+    <img src="{% static 'auto-enroll/logo.png' %}" alt="Auto Enroll logo" style="max-width:200px;">
+    <a class="btn btn-primary" href="{% url 'enroll:start' %}">Start Enrollment</a>
+</div>
+{% endblock %}

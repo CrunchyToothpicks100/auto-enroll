@@ -1,4 +1,4 @@
-autoenroll\Lib\site-packages\
+# autoenroll\Lib\site-packages\
 *.py[cod] 
 *.pyc
 __pycache__
