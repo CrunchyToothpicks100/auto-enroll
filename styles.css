@@ -1,5 +1,6 @@
 :root {
     font-family: 'Inter', Helvetica, sans-serif;
+    font-size: 20px;
 }
 
 .title-info {
@@ -9,7 +10,7 @@
 
 .title-info h1 {
     font-size: 70px;
-    margin: 5px;
+    margin: 0px;
     margin-top: 15px;
     color: #026a37;
 }
@@ -21,4 +22,28 @@
      1px -1px 0 #026a37,
     -1px  1px 0 #026a37,
      1px  1px 0 #026a37;
+}
+
+.degree-info {
+    margin-inline: 20px;
+    margin-top: 50px;
+    justify-items: center;
+}
+
+.degree-info form {
+    background-color: #CCCCCC;
+    border-radius: 8px;
+    padding: 30px;
+    width: 400px;
+}
+
+.degree-info select {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
 }
