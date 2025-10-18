@@ -2,3 +2,4 @@ autoenroll\Lib\site-packages
 *.py[cod] 
 *.pyc
 __pycache__
+db.sqlite3
