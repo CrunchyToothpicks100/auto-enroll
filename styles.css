@@ -18,10 +18,10 @@
 .hollow {
     color: white;
     text-shadow:
-    -1px -1px 0 #026a37,
-     1px -1px 0 #026a37,
-    -1px  1px 0 #026a37,
-     1px  1px 0 #026a37;
+        -1px -1px 0 #026a37,
+        1px -1px 0 #026a37,
+        -1px 1px 0 #026a37,
+        1px 1px 0 #026a37;
 }
 
 .degree-info {
@@ -30,7 +30,7 @@
     justify-items: center;
 }
 
-.degree-info form {
+.degree-info .fields {
     background-color: #CCCCCC;
     border-radius: 8px;
     padding: 30px;
@@ -40,10 +40,58 @@
 .degree-info select {
     width: 95%;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border: 1px solid #888;
     border-radius: 10px;
     background-color: #fff;
     font-size: 16px;
-    box-sizing: border-box;
-    outline: none;
+}
+
+.degree-info input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 16px;
+}
+
+button {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 95%;
+    padding: 10px;
+}
+
+#schedule {
+    display: none;
+    margin-top: 40px;
+    background-color: #CCCCCC;
+    border-radius: 8px;
+    padding: 30px;
+    min-width: 600px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+#enroll {
+    margin-top: 20px;
+    width: 200px;
+    align-self: center;
+}
+
+#enrolled {
+    margin-left: 15px;
 }

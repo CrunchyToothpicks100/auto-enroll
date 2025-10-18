@@ -1,30 +1,71 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Virtual Advisor</title>
-        <link href="styles.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    </head>
-    <body>
-        <!-- Title and info -->
-        <div class="title-info">
-            <h1>Virtual <span class="hollow">Advisor</span></h1>
-            <p style="color: #757575">
-                Generate potential course schedules catered to 
-                your degree for the Spring 2026 semester
-            </p>
-        </div>
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Advisor</title>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
 
+<body>
+    <!-- Title and info -->
+    <div class="title-info">
+        <h1>Virtual <span class="hollow">Advisor</span></h1>
+        <p style="color: #757575">
+            Generate potential course schedules catered to
+            your degree for the Spring 2026 semester
+        </p>
+    </div>
+
+    <div class="degree-info">
         <!-- Degree Info Form -->
-        <div class="degree-info">
-            <form>
-                <label for="major">Major</label>
-                <select name="major">
-                    <option value="cis-it">CIS - Info Tech (BS)</option>
-                </select>
-            </form>
+        <div class="fields">
+            <label for="major">Major</label>
+            <select id="major" name="major">
+                <option value="cis-it">CIS - Info Tech (BS)</option>
+            </select>
+
+            <label for="search">Classes taken (or in-progress)</label>
+            <input name="search-input" id="search-input" type="text"
+                placeholder="Enter Course (e.g., CIS 110 or Programming I)">
+            <button id="add-class">Add Class</button>
+            <ul id="classes-taken"></ul>
+            <button id="search-button">Get Schedule</button>
         </div>
-    </body>
+
+        <!-- Auto generated course schedule -->
+        <div id="schedule">
+            <h2 style="margin: 0px; margin-bottom: 15px;">Course Schedule</h2>
+            <table id="course-table">
+                <tr>
+                    <th>CRN</th>
+                    <th>Subject</th>
+                    <th>Course</th>
+                    <th>Name</th>
+                    <th>Days</th>
+                    <th>Begin</th>
+                    <th>End</th>
+                    <th>Building</th>
+                    <th>Room</th>
+                </tr>
+            </table>
+            <button id="enroll">Enroll</button>
+            <span id="enrolled"></span>
+        </div>
+        <script src="readcsv.js"></script>
+
+        <!-- Enroll confirmation script -->
+        <script>
+            const button = document.getElementById("enroll");
+            const output = document.getElementById("enrolled");
+
+            button.onclick = function () {
+                output.textContent = "You are now enrolled!";
+            };
+        </script>
+    </div>
+</body>
+
 </html>
