@@ -3,7 +3,7 @@ let coursesTaken = [];  // an array of strings
 let coursesTakenJSON = [];  // an array of JSON objects
 
 // Load CSV from project folder
-fetch('courses.csv')
+fetch('static/courses.csv')
     .then(response => response.text())
     .then(csvText => parseCSV(csvText))
     .catch(err => console.error('Error loading CSV:', err));

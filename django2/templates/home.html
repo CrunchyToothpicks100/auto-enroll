@@ -1,0 +1,40 @@
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Advisor</title>
+    <link href="static/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+
+<body>
+    <!-- Title and info -->
+    <div id="gradient-bg">
+        <img src="static/Lion-left-facing.png" height="300px">
+        <div id="sign-in">
+            <form id="sign-in-form" action="">
+                <div class="title-info">
+                    <h1 style="margin-top: -4px">Virtual <span style="color: black">Advisor</span></h1>
+                </div>
+                <label for="Username">Username</label>
+                <input id="username" name="username" type="text" required>
+                <label for="search">Password</label>
+                <input name="search-input" id="search-input" type="password" required>
+                <button id="sign-in-button" type="submit">Sign In</button>
+            </form>
+            <script>
+                document.getElementById("sign-in-form").addEventListener("submit", function (event) {
+                    event.preventDefault(); // prevent the form’s default submission
+                    window.location.href = "/num";
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock content %}
