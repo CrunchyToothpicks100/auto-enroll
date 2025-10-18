@@ -10,15 +10,20 @@ fetch('courses.csv')
 
 // Convert CSV text into csvData array
 function parseCSV(csvText) {
-    const rows = csvText.trim().split('\n');
-    const headers = rows[1].split(',').map(h => h.trim());
-    csvData = rows.slice(2).map(row => {
-        const values = row.split(',').map(v => v.trim());
-        return headers.reduce((obj, header, i) => {
-            obj[header] = values[i];
-            return obj;
-        }, {});
+    const results = Papa.parse(csvText, {
+        header: true,
+        skipEmptyLines: true,
+        dynamicTyping: false,
+        transform: (value) => {
+            // Convert nulls or undefined to blank strings
+            if (value === null || value === "null") return " ";
+            return value;
+        }
     });
+
+    // PapaParse stores the parsed objects in results.data
+    csvData = results.data;
+    console.log(JSON.stringify(csvData));
 }
 
 // Search for courses and returns JSON array
@@ -42,7 +47,7 @@ function searchCourse(query) {
 
         return csvData.filter(row =>
             row.Subject?.toUpperCase() === subject &&
-            row.Course === number
+            parseInt(row.Course) == number
         );
     }
     else {
@@ -51,6 +56,7 @@ function searchCourse(query) {
 }
 
 function searchNextCoreCourses() {
+    // returns data for all CIS classes EXCLUDING courses taken
     return csvData.filter(row =>
         !coursesTakenJSON.includes(row) &&
         row.Subject === "CIS"
@@ -80,8 +86,6 @@ document.getElementById('search-button').addEventListener('click', () => {
         coursesTakenJSON.push(courseJSON);
     });
 
-    console.log("courses taken JSON: " + JSON.stringify(coursesTakenJSON));
-
     // Array of next core classes
     let nextCoreArray = searchNextCoreCourses();
 
@@ -89,8 +93,6 @@ document.getElementById('search-button').addEventListener('click', () => {
     if (nextCoreArray.length > 4) {
         nextCoreArray = nextCoreArray.slice(0, 4);
     }
-
-    console.log("next 4: " + JSON.stringify(nextCoreArray));
 
     const schedule = document.getElementById("schedule");
     schedule.style.display = "block";
@@ -108,14 +110,15 @@ document.getElementById('search-button').addEventListener('click', () => {
 
     // Fill the table
     nextCoreArray.forEach(courseJSON => {
+        console.log("course JSON: " + JSON.stringify(courseJSON));
+
         const row = document.createElement("tr");
 
-        const headers = ["CRN", "Subject", "Course", "Days", "Begin", "End"];
+        const headers = ["CRN", "Subject", "Course", "Description", "Days", "Begin", "End", "Building", "Room"];
 
         // Loop through each value in the JSON object
         headers.forEach(key => {
             const cell = document.createElement("td");
-            console.log(key);
             cell.textContent = courseJSON[key];
             row.appendChild(cell);
         });

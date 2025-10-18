@@ -71,9 +71,17 @@
 #schedule {
     display: none;
     margin-top: 40px;
+    background-color: #CCCCCC;
+    border-radius: 8px;
+    padding: 30px;
+    min-width: 600px;
 }
 
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
 }

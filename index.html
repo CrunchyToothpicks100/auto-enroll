@@ -6,6 +6,7 @@
     <title>Virtual Advisor</title>
     <link href="styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
 </head>
 
 <body>
@@ -33,16 +34,19 @@
             <ul id="classes-taken"></ul>
             <button id="search-button">Get Schedule</button>
         </div>
-        <div id="schedule" class="fields">
+        <div id="schedule">
             <h2 style="margin: 0px; margin-bottom: 15px;">Course Schedule</h2>
             <table id="course-table">
                 <tr>
                     <th>CRN</th>
                     <th>Subject</th>
                     <th>Course</th>
+                    <th>Name</th>
                     <th>Days</th>
                     <th>Begin</th>
                     <th>End</th>
+                    <th>Building</th>
+                    <th>Room</th>
                 </tr>
             </table>
         </div>
