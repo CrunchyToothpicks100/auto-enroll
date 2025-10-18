@@ -30,7 +30,7 @@
     justify-items: center;
 }
 
-.degree-info form {
+.degree-info .fields {
     background-color: #CCCCCC;
     border-radius: 8px;
     padding: 30px;
@@ -66,4 +66,14 @@
     border-radius: 10px;
     width: 95%;
     padding: 10px;
+}
+
+#schedule {
+    display: none;
+    margin-top: 40px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
